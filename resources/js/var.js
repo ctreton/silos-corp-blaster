@@ -1,7 +1,7 @@
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 600;
 const SPRITE_FRAMERATE = 7;
-const LEVEL_TIME = 20;
+const LEVEL_TIME = 60;
 
 var map;
 var cursors;

@@ -6,7 +6,7 @@ function initGame(){
     game.physics.startSystem(Phaser.Physics.ARCADE);
     bgMusic = game.add.audio('bg_music');
     bgMusic.loop = true;
-    // bgMusic.play();
+    bgMusic.play();
     gameStyle = { font: "32px Arial", fill: "#66279c", boundsAlignH: "center", boundsAlignV: "middle", align: "center"};
 
     game.stage.backgroundColor = '#1873CE';
