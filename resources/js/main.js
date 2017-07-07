@@ -10,15 +10,18 @@ function update() {
         moveChar();
     }
 
-    if(levelStart != 0) {
-        minute = Math.floor((90 - (timer.seconds - levelStart)) / 60);
-        seconde = Math.floor((90 - (timer.seconds - levelStart)) % 60);
+    if(levelStart > 0) {
+        minute = Math.floor((LEVEL_TIME - (timer.seconds - levelStart)) / 60);
+        seconde = Math.floor((LEVEL_TIME - (timer.seconds - levelStart)) % 60);
         seconde = seconde < 10 ? '0' + seconde : seconde;
         if (!timerText) {
             timerText = game.add.text(0, 0, minute + ':' + seconde, gameStyle);
             timerText.setTextBounds(20, 20, 150, 30);
         }
         timerText.text = minute + ':' + seconde;
+    } else {
+        if (timerText)
+            timerText.text = "";
     }
 
     pos = [];
@@ -52,8 +55,13 @@ function update() {
         } else {
             computers.getChildAt(2).kill();
         }
-        if (computers.countLiving() == 2) {
+        if (!happy && computers.countLiving() == 2) {
             addHearts();
+            happy = true;
+        }
+        if (happy && computers.countLiving() < 2) {
+            happy = false;
+            removeHearts();
         }
     }
 
@@ -61,7 +69,7 @@ function update() {
         finishLevel();
     }
 
-    if (levelStart != 0 && (levelStart + 90) < timer.seconds) {
+    if (levelStart != 0 && (levelStart + LEVEL_TIME) < timer.seconds) {
         gameOver();
     }
 
@@ -122,6 +130,7 @@ function loadLevel(lvl) {
 
     computers = game.add.group();
     if (lvl == 2) {
+        happy = false;
         addComputer(16, 265);
         addComputer(184, 265);
         addComputer(144, 17);
@@ -207,6 +216,10 @@ function startTimer() {
 
 function gameOver() {
     levelStart = 0;
+    if (hearts)
+        hearts.removeAll();
+    if (chars)
+        chars.removeAll();
     splash = game.add.sprite(232, 96, 'gameOver');
     gameover = true;
 }
