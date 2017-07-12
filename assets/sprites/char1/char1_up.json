@@ -1,0 +1,7 @@
+{"frames":[
+    {"filename":"char1","frame":{"x":72,"y":0,"w":72,"h":96},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":72,"y":0,"w":72,"h":96},"sourceSize":{"w":72,"h":96}},
+    {"filename":"char1","frame":{"x":0,"y":0,"w":72,"h":96},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":0,"y":0,"w":72,"h":96},"sourceSize":{"w":72,"h":96}},
+    {"filename":"char1","frame":{"x":72,"y":0,"w":72,"h":96},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":72,"y":0,"w":72,"h":96},"sourceSize":{"w":72,"h":96}},
+    {"filename":"char1","frame":{"x":144,"y":0,"w":72,"h":96},"rotated":false,"trimmed":false,"spriteSourceSize":{"x":144,"y":0,"w":72,"h":96},"sourceSize":{"w":72,"h":96}}
+],
+"meta":{"image":"char1.png","size":{"w":216,"h":384},"scale":1}}

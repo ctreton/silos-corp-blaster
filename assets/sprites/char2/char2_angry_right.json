@@ -1,0 +1,7 @@
+{"frames":[
+    {"filename":"char2_angry","frame":{"x":0,"y":32,"w":24,"h":32}},
+    {"filename":"char2_angry","frame":{"x":24,"y":32,"w":24,"h":32}},
+    {"filename":"char2_angry","frame":{"x":48,"y":32,"w":24,"h":32}},
+    {"filename":"char2_angry","frame":{"x":24,"y":32,"w":24,"h":32}}
+],
+"meta":{"image":"char2_angry.png","size":{"w":72,"h":128},"scale":1}}
